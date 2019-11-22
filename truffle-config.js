@@ -1,14 +1,30 @@
+const HDWalletProvider = require('truffle-hdwallet-provider');
+const infuraKey = "6ce48f3a886547ba92b2272cf3270dc0";
+
+const fs = require('fs');
+const mnemonic = fs.readFileSync(".secret").toString().trim();
+
 module.exports = {
-  // See <http://truffleframework.com/docs/advanced/configuration>
-  // for more about customizing your Truffle configuration!
   networks: {
     development: {
-      host: "127.0.0.1",
+      host: '127.0.0.1',
       port: 7545,
-      network_id: "*" // Match any network id
+      network_id: '*',
     },
-    develop: {
-      port: 8545
+    ropsten: {
+      provider: () => new HDWalletProvider(mnemonic, 'https://ropsten.infura.io/v3/979455b137d44f8aa542c510f56d8d44'),
+      network_id: 3,
+      gas: 5500000,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    mainnet: {
+      provider: () => new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/v3/979455b137d44f8aa542c510f56d8d44'),
+      network_id: 1,
+      gas: 9000000,
+      confirmations: 2,
+      timeoutBlocks: 200
     }
   }
 };

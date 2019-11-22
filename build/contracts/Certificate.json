@@ -1608,6 +1608,31 @@
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {
+        "0x2e64c0b9d6cab9d8c42fdbbb1d639746a7b257870bb42b09d181286ca5957cc6": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "certificatename",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "receiver",
+              "type": "string"
+            }
+          ],
+          "name": "CertificateGiven",
+          "type": "event",
+          "signature": "0x2e64c0b9d6cab9d8c42fdbbb1d639746a7b257870bb42b09d181286ca5957cc6"
+        }
+      },
+      "links": {},
+      "address": "0x80F188B45190347ba143ba53656635eF70Cec48A",
+      "transactionHash": "0xf5d3fa78d3a65fe2f053aded3204b3b2ed2187840ace0e01f499dd5360880185"
+    },
     "5777": {
       "events": {
         "0x2e64c0b9d6cab9d8c42fdbbb1d639746a7b257870bb42b09d181286ca5957cc6": {
@@ -1630,12 +1655,12 @@
         }
       },
       "links": {},
-      "address": "0x5Cd163654Fd999D060Dc29a1603d114e41547735",
-      "transactionHash": "0x28a0fe19e8bf86158978e6e7d79994a8c9893f1d3ab728adf9b12f974bc08355"
+      "address": "0x477Caa3d2236B0D9aAc8b50b9daFC65BDC21Cacf",
+      "transactionHash": "0xb35384d0281deb0ea4f5e20fba4192a805208a68cc6ce25ed84822c73a2f09fc"
     }
   },
   "schemaVersion": "3.0.15",
-  "updatedAt": "2019-11-22T18:12:56.128Z",
+  "updatedAt": "2019-11-22T19:24:35.184Z",
   "devdoc": {
     "methods": {}
   },
